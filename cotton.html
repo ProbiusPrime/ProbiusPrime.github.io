@@ -1,46 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Test</title>
+	<title></title>
 <script src="https://code.jquery.com/jquery-3.6.0.js"
   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
   crossorigin="anonymous"></script>
  <script type = "text/javascript">
  	$(function() {
-		$('#cotton').bind('click', function(event) {
-			location.href="cotton.html";
-		});
 		$('#logo').bind('click', function(event) {
 			location.href="index2.html";
 		});
 	});
-
-	imgslide();
-	function imgslide(){
-		$imgval = $("#slide").attr("imgval"); // 이미지 번호 가져옴
-		$imgmx = $("#slide").attr("imgmx"); // 이미지 개수 가져옴
-			$("#banner"+$imgval).hide();
-			if($imgval == $imgmx) {
-				$imgval = 1;
-			}else {
-				$imgval++;
-			}
-			$("#banner"+$imgval).fadeIn(500);
-			$("#slide").attr('imgval',$imgval);
-			setTimeout('imgslide()', 4500);
-	}
-
  </script>
 <style type="text/css">
 * {
 	padding: 0;
 	margin: 10px;
 }
+li {
+	list-style-type: none;
+}
 .clear {
 	clear: both;
 }
 header {
-	width: 995px;
+	width: 900px;
 	height: 100px;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -55,7 +39,7 @@ header {
 	margin: 20px 20px 0 0;
 }
 nav {
-	width: 995px;
+	width: 900px;
 	height: 70px;
 	margin-top: 10px;
 	border: solid 1px #ff0000; 
@@ -71,34 +55,22 @@ section {
 	float: left;
 	margin-top: 10px;
 	margin-left: 10px;
-	border: solid 0px #cccccc;
-}
-kart {
-	float: left;
-	margin-top: 5px;
-	margin-left: 36px;
-	margin-right: 5px;
 	border: solid 1px #cccccc;
 }
-
 aside {
-
-	height: 365px;
+	height: 345px;
 	float: left;
-	margin-left: 800px;
-	margin-top: 0px;
+	margin-left: 0px;
+	margin-top: 10px;
 	border: solid 1px #cccccc;
-	padding-top : 20px;
-	padding-left: 15px; 
-
+	padding-top : 10px;
+	padding-left: 0px; 
 }
 aside li {
-	position: relative;
 	margin-bottom: 20px;
-
 }
 footer {
-	width: 995px;
+	width: 900px;
 	height: 100px;
 	margin-top: 10px;
 	border: solid 1px #cccccc; 
@@ -110,6 +82,7 @@ footer {
 #customer {
 	float: right;
 	margin: 30px 0 0 180px;
+	padding-right: 20px;
 }
 
 #page{
@@ -118,25 +91,34 @@ footer {
 	border: solid 0px #cccccc;
 }
 
-#slide{
-	position: relative;
-	width:689;
-	margin-left: 30px;
+TransView {
+	float: left;
+	margin-top: 5px;
+	margin-left: 15px;
+	margin-right: 13px;
+	border: solid 1px #cccccc;
 }
-#slide li{
-	position: absolute;
-	top:0;
-	left:0;
-	display: :none;
+
+kart {
+	float: left;
+	margin-top: 5px;
+	margin-left: 0px;
+	margin-right: 0px;
+	border: solid 1px #cccccc;
 }
-#slide img{
-	width:689;
-	height:340;
+spec{
+	height: 240px;
+	float: left;
+	margin-left: 0px;
+	margin-top: 5px;
+	border: solid 1px #cccccc;
+	padding-top : 10px;
+	padding-left: 0px; 
 }
-change{
-	background:yellow;
-	transition: width 2s;
-}
+
+greenback{
+		background:	#ADFF2F;
+	}
 </style>	
 </head>
 <body id="page">
@@ -158,37 +140,35 @@ change{
 </nav>
 <div class="clear"></div>	
 <section>
-	<div id="slide" imgval="1" imgmx="4">
-		<li id="banner1"><img src="./img/cottonV1T.jpg" alt=""/></li>
-		<li id="banner2"><img src="./img/maratonV1T.jpg" alt=""/></li>
-		<li id="banner3"><img src="./img/saberV1T.jpg" alt=""/></li>
-		<li id="banner4"><img src="./img/lodyCross.jpg" alt=""/></li>
-	</div>
+	<img id="spec" src="./img/cottonV1T.jpg">
 </section>
 	<aside>
-		<div id="asideli" tagvar="1" tagmx="4">
-			<li id="tag1"> 코튼 V1 </li>
-			<li id="tag2"> 마라톤 V1 </li>
-			<li id="tag3"> 세이버 V1 </li>
-			<li id="tag4"> 로디 크로스 </li>
+		<ul>
+			<kart>
+			<img src="./img/cottonV1.png" height="100px">
+			</kart>
+			<li> 드리프트 : 950 </li>
+			<li> 가속력 : 924</li>
+			<li> 코너링 : 865 </li>
+			<li> 부스터 시간 : 860 </li>
+			<li> 부스터 충전량 : 590 </li>
 		</ul>	
 	</aside>
 <div class="clear"></div>
-<kart>
-	<img id="cotton" src="./img/cottonV1.png" height="100px">
-</kart>
-<kart>
-	<img src="./img/burstV1.png" height="100px">
-</kart>
-<kart>
-	<img src="./img/solidV1.png" height="100px">
-</kart>
-<kart>
-	<img src="./img/maratonV1.png" height="100px">
-</kart>
-<kart>
-	<img src="./img/saberV1.png" height="100px">
-</kart>
+
+<TransView>
+	<img id="transview" src="./img/cottonTrans.gif">
+	<p>트랜스폼</p>
+</TransView>
+<spec>
+		<ul>
+			<li><greenback>직선 속도</greenback>: 208km/h | 218km/h(익시드) </li>
+			<li><greenback>부스터 속도</greenback> : 291km/h | 308km/h(익시드)</li>
+			<li><greenback>스타트 부스터</greenback> : 305km/h </li>
+			<li><greenback>헤어핀 감속</greenback> : 126~133km/h </li>
+			<li><greenback>익시드 지속 시간</greenback> : 2.5s(L-type) </li>
+		</ul>	
+	</spec>
 <div class="clear"></div>
 <footer>
 	<div id="address">
