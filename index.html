@@ -55,9 +55,10 @@ header {
 	margin: 20px 20px 0 0;
 }
 nav {
-	width: 995px;
+	width: 945px;
 	height: 70px;
 	margin-top: 10px;
+	padding-left: 50px;
 	border: solid 1px #ff0000; 
 }
 nav li{
@@ -133,9 +134,17 @@ footer {
 	width:689;
 	height:340;
 }
-change{
-	background:yellow;
+textchg{
+	background:green;
 	transition: width 2s;
+}
+textchg:hover{
+	background:yellow;
+}
+#menubar li:hover{
+	font-size :20px;
+	background:#ADFF2F;
+	transition: 1s;
 }
 </style>	
 </head>
@@ -149,11 +158,13 @@ change{
 <div class="clear"> </div><!--float 해제-->
 <nav>
 	<ul>
-		<li>공지사항 </li>
-		<li>카트바디 </li>
-		<li>트랙정보 </li>
-		<li>라이더 </li>
-		<li>이벤트 </li>
+		<div id="menubar">
+			<li>공지사항 </li>
+			<li>카트바디 </li>
+			<li>트랙정보 </li>
+			<li>라이더 </li>
+			<li>이벤트 </li>
+		</div>
 	</ul>	
 </nav>
 <div class="clear"></div>	
